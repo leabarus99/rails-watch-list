@@ -6,9 +6,9 @@
     <h2><%= l.movie.title %></h2>
     <p><%= l.movie.overview %></p>
     <p><%= l.movie.poster_url %></p>
-    <p><%= l.movie.rating %></p>
+    <p><%= l.movie.rating %>/10</p>
 
-<p><%= link_to "Delete #{l}",
+<p><%= link_to "Delete",
         bookmark_path(l),
         method: :delete,
         data: { confirm: "Are you sure?" } %></p>
