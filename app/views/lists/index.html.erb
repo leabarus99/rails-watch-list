@@ -1,7 +1,24 @@
-<h1>List of Movies</h1>
-
-  <% @lists.each do |list| %>
-    <p><%= link_to list.name, list_path(list) %></p>
-  <% end %>
-
-  <p><%= link_to "Add list", new_list_path %></p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+  <div class="banner-title">
+    <div><h1>Today's selection</h1></div>
+    <div><p>Batman: The dark knight rises</p></div>
+    <div class="watch-button">
+      <button>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> Watch now
+      </button>
+    </div>
+  </div>
+  <div class="banner-navbar">
+    <nav>
+      <ul>
+        <% @lists.each do |list| %>
+          <li><%= link_to list.name, list_path(list) %></li>
+        <% end %>
+      </ul>
+      <p><%= link_to "+ Add list", new_list_path %></p>
+    </nav>
+  </div>
+</div>
